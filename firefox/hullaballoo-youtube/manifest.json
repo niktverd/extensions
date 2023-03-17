@@ -1,0 +1,39 @@
+{
+    "name": "Hullaballoo - got one video",
+    "version": "0.0.0.1",
+    "manifest_version": 3,
+    "description": "An extension to display the NASA picture of the day.",
+    "host_permissions": ["<all_urls>"],
+    "icons": {
+        "192": "icons/icon-192x192.png"
+    },
+    "action": {
+        "default_icon": {
+            "16": "images/start.png",
+            "24": "images/start.png",
+            "32": "images/start.png"
+        },
+        "default_title": "My YT Bookmarks",
+        "default_popup": "popup/popup.html"
+    },
+    "content_security_policy": {
+        "extension_pages": "default-src 'self'; connect-src https://* data: blob: filesystem:;"
+      },
+    "permissions": ["tabs", "storage"],
+    "background": {
+        "service_worker": "background.js"
+    },
+    "web_accessible_resources": [
+        {
+            "resources": ["images/start.png"],
+            "matches": ["https://*.youtube.com/*"]
+        }
+    ],
+    "content_scripts": [
+        {
+            "matches": ["https://*.youtube.com/*"],
+            "js": ["contentScript.js"]
+        }
+    ],
+    "options_page": "option.html"
+}

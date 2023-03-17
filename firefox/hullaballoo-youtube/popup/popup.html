@@ -1,0 +1,47 @@
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <link rel="stylesheet" href="popup.css">
+    </head>
+    <body>
+        <h2>Hullaballo | YouTube</h2>
+        <input id="videoUrl" />
+        <div id="subcategories" class="subcategories"></div>
+        <button id="sendmessageid">Send</button>
+        <div id="result-container" class="hidden-container">
+            <div name="video-info" class="grid-container gray">
+                <div class="grid-header">
+                    Video loading status:
+                </div>
+                <div>
+                    <div id="video-info-value">no-data</div>
+                </div>
+            </div>
+            <div name="duration-info" class="grid-container">
+                <div class="grid-header">
+                    Is <b>duration</b> between 10s and 120s:
+                </div>
+                <div>
+                    <div id="duration-info-value">no-data</div>
+                </div>
+            </div>
+            <div name="orientation-info" class="grid-container">
+                <div class="grid-header">
+                    Is <b>orientation</b> matching requirements:
+                </div>
+                <div>
+                    <div id="orientation-info-value">no-data</div>
+                </div>
+            </div>
+            <div name="category-info" class="grid-container gray">
+                <div class="grid-header">
+                    Is <b>categoty</b> matching requirements:
+                </div>
+                <div>
+                    <div id="category-info-value">no-data</div>
+                </div>
+            </div>
+        </div>
+        <script src="popup.js"></script>
+    </body>
+</html>
